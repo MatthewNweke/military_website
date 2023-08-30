@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src/**/*.js",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -28,6 +28,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   }
 }
