@@ -4,11 +4,11 @@ import Header from '../components/Header';
 
 const Dashboard = () => {
   return (
-    <div className="w-screen max-w-screen flex justify-between gap-5">
-      <div className="w-52 xl:w-64">
+    <div className="w-screen max-w-screen flex justify-between">
+      <div className="w-[15rem] xl:w-72 py-6 px-2 xl:px-3">
         <DashboardSidebar />
       </div>
-      <div className="flex-1 min-h-screen bg-pink-100 p-5 w-full">
+      <div className="flex-1 min-h-screen bg-pink-100 p-6 w-full">
         <Header />
         <DashboardMain />
       </div>
