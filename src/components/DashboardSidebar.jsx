@@ -1,5 +1,6 @@
 import { Avatar } from '@mui/material';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDashboardPage } from '../store/reducers/main_reducer';
 import DashboardIcon from './utils/icons/DashboardIcon';
 import NavIcon from './utils/icons/NavIcon';
 import OutlineEmail from './utils/icons/OutlineEmail';
@@ -8,7 +9,8 @@ import SupportIcon from './utils/icons/SupportIcon';
 import Button from './utils/reusables/Button';
 
 const DashboardSidebar = () => {
-  const [page, setPage] = useState('dashboard');
+  const dispatch = useDispatch();
+  const page = useSelector((state) => state.main.page);
 
   return (
     <div>
@@ -31,9 +33,7 @@ const DashboardSidebar = () => {
 
       <div className="py-2 flex flex-col mt-5">
         <div
-          onClick={() => {
-            setPage('dashboard');
-          }}
+          onClick={() => dispatch(setDashboardPage('dashboard'))}
           className={
             page === 'dashboard'
               ? 'flex items-center px-3 py-2 bg-transparent rounded-lg cursor-pointer text-gray-800 border-2 border-gray-400 my-4 transition ease-in-out delay-250'
@@ -44,9 +44,7 @@ const DashboardSidebar = () => {
           <p className="ml-2 font-semibold capitalize text-lg">Dashboard</p>
         </div>
         <div
-          onClick={() => {
-            setPage('inbox');
-          }}
+          onClick={() => dispatch(setDashboardPage('inbox'))}
           className={
             page === 'inbox'
               ? 'flex items-center px-3 py-2 bg-transparent rounded-lg cursor-pointer text-gray-800 border-2 border-gray-400 my-4 transition ease-in-out delay-250'
@@ -58,9 +56,7 @@ const DashboardSidebar = () => {
         </div>
 
         <div
-          onClick={() => {
-            setPage('portfolio');
-          }}
+          onClick={() => dispatch(setDashboardPage('portfolio'))}
           className={
             page === 'portfolio'
               ? 'flex items-center px-3 py-2 bg-transparent rounded-lg cursor-pointer text-gray-800 border-2 border-gray-400 my-4 transition ease-in-out delay-250'
@@ -72,9 +68,7 @@ const DashboardSidebar = () => {
         </div>
 
         <div
-          onClick={() => {
-            setPage('support');
-          }}
+          onClick={() => dispatch(setDashboardPage('support'))}
           className={
             page === 'support'
               ? 'flex items-center px-3 py-2 bg-transparent rounded-lg cursor-pointer text-gray-800 border-2 border-gray-400 my-4 transition ease-in-out delay-250'

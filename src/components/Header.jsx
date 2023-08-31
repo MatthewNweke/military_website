@@ -9,7 +9,7 @@ const Header = () => {
       <div>
         <Search />
       </div>
-      <div className="flex items-center justify-between gap-7 mr-5">
+      <div className="flex items-center justify-between gap-7">
         <div className="flex items-center gap-1">
           <Avatar src="" alt="" />
           <p className="font-semibold text-gray-700">Umoh</p>

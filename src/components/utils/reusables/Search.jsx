@@ -65,6 +65,7 @@ function Search() {
             onFocus={handleOnFocus}
             autoFocus
             formatResult={formatResult}
+            placeholder="Personnel search"
             styling={{
               borderRadius: '25px',
               cursor: 'pointer',
