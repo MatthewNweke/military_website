@@ -8,14 +8,6 @@ const DashboardCards = () => {
         <UserCard />
         <UserCard />
         <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
       </div>
     </div>
   );
